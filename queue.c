@@ -31,10 +31,7 @@ bool q_insert_head(struct list_head *head, char *s)
         free(new);
         return false;
     }
-    new->list.next = head->next;
-    new->list.prev = head;
-    head->next->prev = &new->list;
-    head->next = &new->list;
+    list_add(&new->list, head);
     return true;
 }
 
