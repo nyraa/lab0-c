@@ -151,7 +151,7 @@ void q_reverseK(struct list_head *head, int k)
     LIST_HEAD(dummy_head);
     struct list_head *head_from = head, *node = head, *tmp;
     int size = q_size(head);
-    for (int i = 0, j = 0; i < size; ++i, ++j) {
+    for (int i = 0, j = 0; i <= size; ++i, ++j) {
         if (j == k) {
             list_cut_position(&dummy_head, head_from, node);
             q_reverse(&dummy_head);
