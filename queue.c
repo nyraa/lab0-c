@@ -148,8 +148,7 @@ void q_reverseK(struct list_head *head, int k)
         return;
     if (list_is_singular(head))
         return;
-    struct list_head dummy_head;
-    INIT_LIST_HEAD(&dummy_head);
+    LIST_HEAD(dummy_head);
     struct list_head *head_from = head, *node = head, *tmp;
     int size = q_size(head);
     for (int i = 0, j = 0; i < size; ++i, ++j) {
